@@ -9,8 +9,16 @@ public class Powerup : MonoBehaviour
     public void Initialize(int initId)
     {
         id = initId;
-        // por agora
-        id = 1;
+        switch (id)
+        {
+            // cor padrao = verde
+            case 2:
+                SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+                spriteRenderer.color = Color.red;
+                return;
+            default:
+                return;
+        }
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -36,6 +44,19 @@ public class Powerup : MonoBehaviour
                 GameObject b = Instantiate(ball, transform.position, transform.rotation);
                 Ball bs = b.GetComponent<Ball>();
                 bs.SpawnNewBall();
+                return;
+            case 2:
+                GameObject[] balls = GameObject.FindGameObjectsWithTag("Ball");
+
+                foreach (GameObject obj in balls)
+                {
+                    Ball ballScript = obj.GetComponent<Ball>();
+
+                    if (ballScript != null)
+                    {
+                        ballScript.AddLife();
+                    }
+                }
                 return;
             default:
                 return;

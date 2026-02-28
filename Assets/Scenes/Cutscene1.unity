@@ -802,6 +802,18 @@ PrefabInstance:
       propertyPath: textComponent
       value: 
       objectReference: {fileID: 1590053628}
+    - target: {fileID: 8609991548195599935, guid: e2fefaccd83931d49a8b8f4d136da02c, type: 3}
+      propertyPath: diags.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8609991548195599935, guid: e2fefaccd83931d49a8b8f4d136da02c, type: 3}
+      propertyPath: 'diags.Array.data[4]'
+      value: "E s\xF3 mais uma coisa: esse jogo \xE9 melhor em 16:9."
+      objectReference: {fileID: 0}
+    - target: {fileID: 8609991548195599935, guid: e2fefaccd83931d49a8b8f4d136da02c, type: 3}
+      propertyPath: 'diags.Array.data[5]'
+      value: Boa sorte!
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

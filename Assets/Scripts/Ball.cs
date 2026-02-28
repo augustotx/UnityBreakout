@@ -15,6 +15,7 @@ public class Ball : MonoBehaviour
 
     [Header("Audio")]
     public AudioClip bounceSound;
+    public AudioClip yippeeSound;
     private AudioSource audioSource;
 
     [Header("Game Logic")]
@@ -124,10 +125,11 @@ public class Ball : MonoBehaviour
 
     void spawnPowerUp()
     {
-        int randomInt = Random.Range(0, 20);
+        int randomInt = Random.Range(0, 10);
         if (randomInt == 1)
         {
-            int randomID = Random.Range(0, 5);
+            int randomID = Random.Range(1, 3);
+            Debug.Log(randomID);
             GameObject localpowerup = Instantiate(powerup, transform.position, transform.rotation);
             Powerup localpowerupscript = localpowerup.GetComponent<Powerup>();
             localpowerupscript.Initialize(randomID);
@@ -154,6 +156,13 @@ public class Ball : MonoBehaviour
             Destroy(this.gameObject);
             Debug.Log("Game Over!");
         }
+    }
+
+    public void AddLife()
+    {
+        audioSource.PlayOneShot(yippeeSound, 0.5f);
+        lives++;
+        UpdateLivesUI();
     }
 
     void UpdateLivesUI()

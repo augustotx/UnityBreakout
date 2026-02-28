@@ -107,8 +107,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   livesText: {fileID: 0}
+  yippeeText: {fileID: 0}
   bounceSound: {fileID: 8300000, guid: a0d24c97341f6b54f9af0aa110baf7fa, type: 3}
+  yippeeSound: {fileID: 8300000, guid: 33adcdb90dca42649b6133402cc333c9, type: 3}
+  lives: 3
   powerup: {fileID: 8103490364863132350, guid: b46b8ad1c8bb7c945acf0d9c3c8c269b, type: 3}
+  yippee: {fileID: 0}
 --- !u!50 &4951218522985607421
 Rigidbody2D:
   serializedVersion: 5
