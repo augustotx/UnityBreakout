@@ -9,14 +9,16 @@ TagManager:
   - LeftBound
   - TopBound
   - BotBound
+  - Powerup
+  - Ball
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Powerups
   - Water
   - UI
-  - 
+  - Player
   - 
   - 
   - 
